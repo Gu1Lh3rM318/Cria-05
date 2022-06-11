@@ -4,5 +4,46 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #25254b;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
+}
+header{
+    background-color: #555575;
+    height: 10vh;
+    width: 100%;
+    grid-area: header;
+    display: flex;
+    place-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-area: main;
+    height: 80vh;
+    grid-gap: 20px;
+}
+.filter{
+    background-color: #3253c2;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5px;
+}
+.content{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+footer{
+    grid-area: footer;
+    height: 10vh;
 }
