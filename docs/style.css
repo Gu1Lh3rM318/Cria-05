@@ -34,7 +34,7 @@ main {
   position: relative;
   font-size: 17px;
   overflow: hidden;
-  transition: width 0.5s;
+  transition: width 1s;
   padding: 80px 0px 0px 10px;
   display: flex;
   flex-direction: column;
