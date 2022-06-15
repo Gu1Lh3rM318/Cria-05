@@ -263,7 +263,7 @@ section:nth-child(2) {
   text-align: center;
   border-radius: 20px;
   overflow: visible;
-  transition: .3s;
+  transition: 0.3s;
   position: relative;
 }
 .social .instagram.active {
