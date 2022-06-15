@@ -250,8 +250,8 @@ section:nth-child(2) {
 .card:hover p {
   color: #111;
 }
-.social { 
-  transform: translateX(440px); 
+.social {
+  transform: translateX(440px);
   position: absolute;
   transition: 0.3s;
 }
@@ -272,8 +272,8 @@ section:nth-child(2) {
 .social:hover {
   transform: translateX(140px);
 }
-.social .instagram:hover{
-  width: 1000px; 
+.social .instagram:hover {
+  width: 1000px;
 }
 .instagram .circle {
   text-align: center;
@@ -295,10 +295,10 @@ section:nth-child(2) {
   background-color: #ff0055;
   border-radius: 20px;
 }
-.instagram .conteudo{
+.instagram .conteudo {
   position: relative;
 }
-.instagram .circle img{
+.instagram .circle img {
   border-radius: 100px;
 }
 .instagram:hover .circle {
