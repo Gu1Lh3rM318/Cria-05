@@ -253,7 +253,7 @@ section:nth-child(2) {
 .social { 
   transform: translateX(440px); 
   position: absolute;
-  transition: 0.5s;
+  transition: 1s;
 }
 .social .instagram {
   display: none;
