@@ -253,7 +253,7 @@ section:nth-child(2) {
 .social { 
   transform: translateX(440px); 
   position: absolute;
-  transition: 1s;
+  transition: 0.3s;
 }
 .social .instagram {
   display: none;
@@ -263,7 +263,7 @@ section:nth-child(2) {
   text-align: center;
   border-radius: 20px;
   overflow: visible;
-  transition: 0.5s;
+  transition: .3s;
   position: relative;
 }
 .social .instagram.active {
