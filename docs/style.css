@@ -4,13 +4,11 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(145deg, #000000, #000000ea);
+  background-image: linear-gradient(60deg, #000000 50%, #1a1a1a);
   display: grid;
-  grid-template-areas:
-    "main"
-    "footer";
   font-family: "Kdam Thmor Pro", sans-serif;
   user-select: none;
+  height: 100vh;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -23,51 +21,43 @@ body {
 main {
   display: grid;
   grid-template-columns: 0.2fr 5.8fr;
-  grid-area: main;
-  height: 100vh;
-  gap: 30px;
+  height: 100%;
 }
 .left {
   background-color: #cfcfcf;
   height: 100%;
   width: 80px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   font-size: 17px;
   overflow: hidden;
   transition: width 0.5s;
-  padding: 80px 0px 0px 10px;
   display: flex;
   flex-direction: column;
+  padding: 85px 0px 0px 10px;
 }
 .left.active {
-  width: 290px;
-  padding: 80px 0px 0px 30px;
+  width: 270px;
+  padding: 85px 0px 0px 10px;
   overflow: visible;
-}
-.navigation {
-  width: 100%;
-  overflow: hidden;
 }
 .navigation ul {
   position: relative;
-  width: 260px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-.navigation ul:last-child {
-  margin-bottom: 0;
+  width: 100%;
+  margin: 0;
 }
 .navigation ul li {
   position: relative;
   list-style: none;
-  width: 263px;
+  width: 100%;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 .navigation ul li b:nth-child(1) {
   position: absolute;
   top: -20px;
-  right: 3px;
+  right: 0px;
   height: 20px;
   width: 20px;
   background-color: #000000;
@@ -86,7 +76,7 @@ main {
 .navigation ul li b:nth-child(2) {
   position: absolute;
   bottom: -20px;
-  right: 3px;
+  right: 0px;
   height: 20px;
   width: 20px;
   background-color: #000000;
@@ -112,12 +102,12 @@ main {
   text-decoration: none;
   font-weight: bold;
   display: flex;
+  width: 260px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   gap: 25px;
   color: #0a0a0a;
   letter-spacing: 2px;
-  transition: 0.5s;
 }
 .navigation ul li a .icon {
   position: relative;
@@ -141,7 +131,6 @@ main {
 .navigation ul li.active a {
   background: var(--color);
   color: #ff0055;
-  z-index: 1;
   width: 260px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -160,6 +149,7 @@ main {
   cursor: pointer;
   display: flex;
   place-content: center;
+  transition: 0.5s;
 }
 .togle.active {
   background: #000000;
@@ -170,7 +160,7 @@ main {
   position: absolute;
   display: none;
   margin: 6px;
-  color: #fa3a7a;
+  color: #ff0055;
 }
 .togle ion-icon.open,
 .togle.active ion-icon.close {
@@ -180,24 +170,139 @@ main {
 .togle.active ion-icon.open {
   display: none;
 }
-
-.content {
-  padding: 15px 10px 10px 10px;
-  height: 100%;
+section:nth-child(2) {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+.container.off {
+  display: none;
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  text-align: center;
+  background-color: #cfcfcf;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.circle {
+  text-align: center;
   width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--clr);
+  clip-path: circle(180px at center 0);
+  transition: 0.5s;
 }
-.content h1 {
-  color: #2aa6aa;
-  font-size: 30px;
+.circle h2 {
+  font-size: 4.5em;
+  padding: 30px 0;
+}
+.content {
+  bottom: 30px;
+  position: absolute;
+  page-break-after: 20px;
+  position: absolute;
+}
+.content p {
+  color: #333;
+  padding: 20px;
   font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 14px;
 }
-.content h2 {
-  color: #000000bb;
-  font-size: 15px;
+.content a {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--clr);
+  border-radius: 40px;
+  transition: 0.5s;
 }
-footer {
-  background-color: #1c3858;
-  grid-area: footer;
-  height: 10vh;
+.container:hover .card {
+  filter: blur(5px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+.container .card:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  filter: blur(0);
+}
+.card:hover .circle {
+  clip-path: circle(400px at center 0);
+}
+.card:hover a {
+  background-color: #cfcfcf;
+  color: #111;
+}
+.card:hover p {
+  color: #111;
+}
+.social {
+  position: absolute;
+}
+.social .instagram {
+  opacity: 0;
+  background-color: #cfcfcf;
+  width: 400px;
+  height: 420px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: visible;
+  transition: 0.5s;
+  position: relative; 
+  transform: translateX(440px); 
+}
+.social .instagram.active {
+  opacity: 1;
+}
+.social .instagram:hover {
+  width: 1000px; 
+  transform: translateX(140px);
+}
+.instagram .circle {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr);
+  clip-path: circle(220px at center 5px);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.instagram .circle .icon {
+  font-size: 6em;
+  color: #cfcfcf;
+  transition: 0.5s;
+  transform: translateY(-40%);
+}
+.instagram .circle .icon ion-icon {
+  background-color: #ff0055;
+  border-radius: 20px;
+}
+.instagram .conteudo{
+  position: relative;
+}
+.instagram .circle img{
+  border-radius: 100px;
+}
+.instagram:hover .circle {
+  clip-path: circle(100%);
+}
+.instagram:hover .circle .icon {
+  transform: translate(-40%, 40%);
+}
+.instagram:hover .foto{
 }

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <section>
@@ -60,9 +61,9 @@
                         </li>
                     </ul>
                     <ul>
-                        <li class="li" style="--color: #000;">
+                        <li class="li" style="--color: #000;" >
                             <b></b>
-                            <b></b><a href="#">
+                            <b></b><a href="#"  id="instagram">
                                 <span class="icon">
                                     <ion-icon name="logo-instagram" style="--color: #ff0055;"></ion-icon>
                                 </span><span class="title" style="--color: #ff0055;">Instagram</span>
@@ -86,7 +87,8 @@
                         </li>
                         <li class="li" style="--color: #000;">
                             <b></b>
-                            <b></b><a href="#">
+                            <b></b>
+                            <a href="#">
                                 <span class="icon">
                                     <ion-icon name="logo-whatsapp" style="--color: #008800;"></ion-icon>
                                 </span><span class="title" style="--color: #008000;">Whatsapp</span>
@@ -102,23 +104,60 @@
             </div>
         </section>
         <section>
-            <div class="content">
-                <h1>Content</h1>
-                <h2></h2>
+            <div class="container">
+                <div class="card">
+                    <div class="circle" style="--clr: #ff0055;">
+                        <h2>01</h2>
+                    </div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quas voluptas quis, iusto inventore minima architecto doloremque nesciunt tempore dolor modi, provident nam? Delectus et alias, praesentium deleniti iusto pariatur!</p>
+                        <a href="#" style="--clr: #ff0055;">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="circle" style="--clr: #14b9d6;">
+                        <h2>02</h2>
+                    </div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, expedita libero fuga in quis molestiae, facere, iusto inventore ut odio non placeat possimus. Reiciendis reprehenderit dolor eaque, possimus neque omnis.</p>
+                        <a href="#" style="--clr: #14b9d6;">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="circle" style="--clr: #e48d0b;">
+                        <h2>03</h2>
+                    </div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, expedita libero fuga in quis molestiae, facere, iusto inventore ut odio non placeat possimus. Reiciendis reprehenderit dolor eaque, possimus neque omnis.</p>
+                        <a href="#" style="--clr: #e48d0b;" >Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social">
+                <div class="instagram">
+                    <div class="circle" style="--clr: #ff0055"><div class="icon">
+                        <ion-icon name="logo-instagram" style="--color: #ff0055;"></ion-icon>
+                    </div>><img src="perfil-insta.jpg" alt=""></div>
+                   <div class="conteudo"</div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <h3>Footer</h3>
-    </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         let menuTogle = document.querySelector('.togle');
         let left = document.querySelector('.left');
+        let insta = document.querySelector('#instagram');
+        let instagram = document.querySelector('.instagram');
+        let container = document.querySelector('.container');
         menuTogle.onclick = function () {
             menuTogle.classList.toggle('active');
             left.classList.toggle('active')
+        }
+        insta.onclick = function () {
+            instagram.classList.toggle('active')
+            container.classList.toggle('off')
         }
 
         let list = document.querySelectorAll('.li');
