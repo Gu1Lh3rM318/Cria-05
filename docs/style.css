@@ -32,12 +32,7 @@ main {
   left: 0;
   font-size: 17px;
   overflow: hidden;
-<<<<<<< HEAD
   transition: width 0.5s;
-=======
-  transition: width 1s;
-  padding: 80px 0px 0px 10px;
->>>>>>> 09140756889a922ff164c5cfd571a8298e905934
   display: flex;
   flex-direction: column;
   padding: 85px 0px 0px 10px;
@@ -255,11 +250,13 @@ section:nth-child(2) {
 .card:hover p {
   color: #111;
 }
-.social {
+.social { 
+  transform: translateX(440px); 
   position: absolute;
+  transition: 0.5s;
 }
 .social .instagram {
-  opacity: 0;
+  display: none;
   background-color: #cfcfcf;
   width: 400px;
   height: 420px;
@@ -267,15 +264,16 @@ section:nth-child(2) {
   border-radius: 20px;
   overflow: visible;
   transition: 0.5s;
-  position: relative; 
-  transform: translateX(440px); 
+  position: relative;
 }
 .social .instagram.active {
-  opacity: 1;
+  display: block;
 }
-.social .instagram:hover {
-  width: 1000px; 
+.social:hover {
   transform: translateX(140px);
+}
+.social .instagram:hover{
+  width: 1000px; 
 }
 .instagram .circle {
   text-align: center;
@@ -308,6 +306,4 @@ section:nth-child(2) {
 }
 .instagram:hover .circle .icon {
   transform: translate(-40%, 40%);
-}
-.instagram:hover .foto{
 }
